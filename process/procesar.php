@@ -3,7 +3,7 @@ require_once('../Config/Autoload.php');
 use Models\Item;
 
 session_start();
-   
+
 if(empty($_SESSION['item-list'])){
 $array = "pincel fino de 2/3, pincel de cerdas finas para acuarela, 120.00, 6,
 pintura fluor 1L, pintura warner fluo, 400.00, 3,
@@ -25,7 +25,7 @@ foreach($nextArray as $key => $value){
 }else{
    // var_dump($_SESSION['item-list']);
     
-   if(empty($_SESSION['sv-items'])){
+   if(empty($_SESSION['svv-items'])){
     foreach($_SESSION['item-list'] as $key => $value){
             
         
@@ -34,13 +34,13 @@ foreach($nextArray as $key => $value){
         }
 
         foreach($items as $item){
-            $_SESSION['sv-items'][] = $item;
+            $_SESSION['svv-items'][] = serialize("Item",$item);
         }
 
         var_dump($items);
     }
 
-    var_dump($_SESSION['sv-items']);
+    var_dump($_SESSION['svv-items']);
 }
 
- //header("location: ../bill-content.php");
+ header("location: ../bill-content.php");

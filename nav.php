@@ -8,6 +8,8 @@
           </li>
           <li class="nav-item">
                <a class="nav-link" href="add-bill.php">Agregar Facturas</a>
+          </li><li class="nav-item">
+               <a class="nav-link" href="add-item.php">Agregar Item</a>
           </li>
           <li class="nav-item">
                <a class="nav-link" href="index.php">Cerrar sesión</a>
